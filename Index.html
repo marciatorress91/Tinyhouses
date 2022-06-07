@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,54 +11,140 @@
 </head>
 <body>
     <!--ENCABEZADO-->
-    <header>
-        <nav>
-            <a href="Index.html"><img src="./assets/LOGO SIN FONDO.png" alt="" class="logo fade-in"></a>    
-            <ul class="navbar">
-                <li><a href="Index.html">INICIO</a></li>
-                <li><a href="./vistas/Quiénessomos.html">QUIÉNES SOMOS</a></li>
-                <li><a href="./vistas/Catálogo.html">CATÁLOGO</a></LI>
-                <li><a href="./vistas/Galería.html">GALERÍA</a></li>
-                <li><a href="./vistas/Contacto.html" class="acontacto">CONTACTO</a></LI>
-            </ul>
-        </nav>   
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a href="Index.html"><img src="./assets/LOGO SIN FONDO.png" alt="" class="logo fade-in"></a>
+              <button class="navbar-toggler boton__nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center navbar1">
+                  <li class="nav-item">
+                    <a class="nav-link a" aria-current="page" href="Index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link a" href="./vistas/Quiénessomos.html">QUIÉNES SOMOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link a" href="./vistas/Catálogo.html">CATÁLOGO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link a" href="./vistas/Galería.html">GALERÍA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link a acontacto" href="./vistas/Contacto.html">CONTACTO</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <!--CUERPO-->  
     <main class="main">
-        <Section class="section__index">
-            <div class="index1">
-                <p class="main__p bounce-in-top1">DISEÑO</p>
-                <p class="main__p bounce-in-top2">PROYECTO</p>
-                <p class="main__p bounce-in-top3">INSTALACIÓN</p>
+      <!--SECCION 1: FOTO FONDO--> 
+      <section class="index1">
+        <div class="col-12 mx-auto d-flex flex-column justify-content-center align-items-center">
+          <p class="main__p bounce-in-top1">DISEÑO</p>
+          <p class="main__p bounce-in-top2">PROYECTO</p>
+          <p class="main__p bounce-in-top3">INSTALACIÓN</p>
+        </div>
+      </section>
+      <!--SECCION 2: CASA DE TUS SUENOS-->
+      <section class="container text-center">
+        <div class="row pb-5">
+          <div class="col-md-6 mx-auto">
+            <img src="./assets/LOGO2.png" alt="" class="logo2">
+          </div>
+          <div class="col-md-6 mx-auto d-flex align-items-center justify-content-center">
+            <p class="main__p--chico m-0">Creamos la casa de tus sueños</p>
+          </div>
+        </div>
+      </section>
+      <!--SECCION 3: CARROUSEL-->
+      <div id="carouselExampleIndicators" class="carousel slide pb-5" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <div class="card align-items-center card1 pt-4 mx-auto" style="width: 60%">
+              <img src="./assets/diseno.jpg" alt="" class="card-img-top imggrid">
+              <div class="card-body text-center">
+                <h5 class="card-title main__p--chico card1">DISEÑO</h5>
+                <p class="card-text main__p--texto card1">Diseñamos el proyecto según las necesidades de cada cliente</p>
+              </div>
             </div>
-            <div class="index2">
-                <img src="./assets/LOGO2.png" alt="" class="logo2">
-                <p class="main__p--chico">Creamos la casa de tus sueños</p>
+          </div>
+          <div class="carousel-item">
+            <div class="card align-items-center card1 pt-4 mx-auto" style="width: 60%">
+              <img src="./assets/proyecto1.png" alt="" class="card-img-top imggrid">
+              <div class="card-body text-center">
+                <h5 class="card-title main__p--chico card1">PROYECTO</h5>
+                <p class="card-text main__p--texto card1">Realizamos el proyecto con materiales de la mejor calidad</p>
+              </div>
             </div>
-            <div class="subindex1">
-                <p class="main__p--chico">DISEÑO</p>
-                <img src="./assets/diseno.jpg" alt="" class="imggrid">
-                <p class="main__p--texto">Diseñamos según las necesidades del cliente</p>
+          </div>
+          <div class="carousel-item">
+            <div class="card align-items-center card1 pt-4 mx-auto" style="width: 60%">
+              <img src="./assets/instalacion1.png" alt="" class="card-img-top imggrid">
+              <div class="card-body text-center">
+                <h5 class="card-title main__p--chico card1">INSTALACIÓN</h5>
+                <p class="card-text main__p--texto card1">Instalamos la tiny house en el lugar deseado por el cliente</p>
+              </div>
             </div>
-            <div class="subindex2">
-                <p class="main__p--chico">PROYECTO</p>
-                <img src="./assets/proyecto1.png" alt="" class="imggrid">
-                <p class="main__p--texto">Llevamos a cabo el proyecto con materiales de la mejor calidad</p>
-            </div>
-            <div class="subindex3">
-                <p class="main__p--chico">INSTALACIÓN</p>
-                <img src="./assets/instalacion1.png" alt="" class="imggrid">
-                <p class="main__p--texto">Realizamos la instalación en el lugar deseado e incluímos los servicios</p>
-            </div>
-        </Section>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
     <!--PIE DE PAGINA-->
-    <footer class="footer">
-        <div>
-            <p>Seguinos en las redes sociales</p>
-            <a href="https://es-la.facebook.com/itinyhouses/"><img src="./assets/Facebook-SIN FONDO.png" alt="" class="footer__iconos"></a>
-            <a href="https://www.instagram.com/tiny.houses/?hl=es"><img src="./assets/IG-SIN FONDO.png" alt="" class="footer__iconos"></a>
+    <footer>
+      <!--Seccion 1: Contacto-->
+      <section class="footer1">
+        <div class="container-fluid text-center pt-4">
+          <div class="row">
+            <div class="col-md-6 mx-auto mb-3">
+              <h6 class="text-uppercase fw-bold mb-4">Tiny Houses Uruguay</h6>
+              <p>Contactanos por cualquiera de los medios disponibles</p>
+            </div>
+            <div class="col-md-6 mx-auto mb-3">
+              <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+              <p><i class="bi bi-house-door-fill me-3"></i>Montevideo, 11300, Uruguay</p>
+              <p><i class="bi bi-envelope-fill me-3"></i>tinyhousesuy@example.com</p>
+              <p><i class="bi bi-telephone-fill me-3"></i>+ 598 99 123 456</p>
+            </div>
+          </div>
+          <hr class="hr2 m-0">
         </div>
+      </section>
+      <!--Seccion 2: Redes sociales -->
+      <section class="d-flex justify-content-center align-items-center  p-4 footer1">
+        <div class="d-none d-sm-block text">
+          <p class="m-0 pe-4">Seguinos en las redes sociales</p>
+        </div>
+        <div>
+          <a href="https://es-la.facebook.com/itinyhouses/"><img src="./assets/Facebook-SIN FONDO.png" alt="" class="footer1__iconos"></a>
+          <a href="https://www.instagram.com/tiny.houses/?hl=es"><img src="./assets/IG-SIN FONDO.png" alt="" class="footer1__iconos"></a>
+        </div>
+      </section>
+      <!--Seccion 3: Copyright -->
+      <div class="text-center p-4 copyright d-flex justify-content-center">
+        <p class="m-0 pe-1">© 2022 Copyright:</p>
+        <a class="text-reset fw-bold" href="Index.html">TinyHousesUY</a>
+      </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
