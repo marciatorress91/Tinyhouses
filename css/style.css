@@ -234,6 +234,31 @@ li{
     color:#d6cfc7
 }
 
+.afooter{opacity: 0.8;
+  color:#d6cfc7
+}
+
+/* link no visitado */
+.afooter:link {
+  opacity: 0.8;
+}
+
+/* Link visitado */
+.afooter:visited {
+  color: #00C2CB;
+}
+
+/* Mouse encima del link */
+.afooter:hover {
+  opacity: 1;
+}
+
+/* link seleccionado */
+.afooter:active {
+  color: #604B2F;
+}
+
+
 /*          ANIMACIONES         */
 
 .bounce-in-top1 {
@@ -377,3 +402,66 @@ li{
       opacity: 1;
     }
   }
+
+  /*          MEDIA <768          */
+
+
+@media only screen and (max-width:768px){
+  
+  .index1{
+    background-size: 80%;
+    font-size: 8vw;
+  }
+
+  .main__p{
+    color:#d6cfc7;
+    font-family: 'Special Elite', cursive;
+    padding: 1vw;
+  }
+
+  .main__p--chico{
+    font-size: 1.5rem;
+  }
+  
+  .main__p--texto{
+      font-size: 1rem;
+  }
+
+  .footer1{
+    font-size: 1rem;
+  }
+
+  .a{
+    font-size: 1rem;
+  }
+
+  .logo{
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .logo2{
+    width: 50%;
+  }
+
+  .main2__h2{
+    font-size: 2.5rem;
+  }
+
+ .main2__p{
+    font-size: 1.25rem;
+  }
+
+  .main__p--quienes{
+    font-size: 1.25rem;
+  }
+
+  .main__p--cat{
+    font-size: 1rem;
+  }
+
+  .form{
+    width: 100%;
+  }
+
+}
