@@ -1,0 +1,26 @@
+.main__galeria{
+    background-color: #9b815f;
+    .main__galeria--h2{
+        font-size: 3rem;
+        padding: 2rem;
+        font-family: 'Special Elite', cursive;
+        color:#d6cfc7;
+        text-align: center;
+        @media only screen and (max-width:768px){
+            font-size: 2.5rem;
+        }
+    }
+    .hr__galeria{
+        border-style: solid;
+        border-width: 0.15rem;
+        border-color:#d6cfc7
+    }
+    .img{
+        width:80%;
+        border-radius: 1rem;
+        opacity: 0.75;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

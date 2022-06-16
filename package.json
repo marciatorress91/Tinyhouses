@@ -1,0 +1,25 @@
+{
+  "name": "tiny-houses-torres",
+  "version": "1.0.0",
+  "description": "Paquete SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss sass/main.scss css/destino.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciatorress91/Tinyhouses.git"
+  },
+  "author": "Marcia Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marciatorress91/Tinyhouses/issues"
+  },
+  "homepage": "https://github.com/marciatorress91/Tinyhouses#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}

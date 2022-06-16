@@ -1,0 +1,42 @@
+.footer1{
+    background-color:#d6cfc7;
+    font-family: 'Special Elite', cursive;
+    color:#9b815f;
+    font-size: 1.25rem;
+    &__iconos{
+        width:2.5rem;
+        height: 2.5rem;
+        opacity: 0.8;
+        &:hover{
+            opacity:1
+        }
+    }
+    .hr2{
+        border-style: solid;
+        border-width: 0.15rem;
+        border-color:#9b815f
+    }
+    @media only screen and (max-width:768px){
+        font-size: 1rem;
+    }
+}
+
+.copyright{
+    background-color: #9b815f;
+    color:#d6cfc7;
+    .afooter{opacity: 0.8;
+        color:#d6cfc7;
+        &:link {
+            opacity: 0.8;
+        }
+        &:visited {
+            color: #00C2CB;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &:active {
+            color: #604B2F;
+        }
+    }
+}

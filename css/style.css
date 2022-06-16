@@ -49,47 +49,15 @@ li{
 }
 
 
-/*          CLASES VARIAS           */
-
-
-.hr{
-    border-style: solid;
-    border-width: 0.15rem;
-    border-color:#d6cfc7
-}
-
-.hr2{
-    border-style: solid;
-    border-width: 0.15rem;
-    border-color:#9b815f
-}
-
-.main{
-    background-color: #9b815f;
-}    
-
-.main2__h2{
-    font-size: 3rem;
-    padding: 2rem;
-    font-family: 'Special Elite', cursive;
-    color:#d6cfc7;
-    text-align: center;
-}
-
-.main2__p{
-    font-size: 1.5rem;
-    padding: 2rem;
-    font-family: 'Special Elite', cursive;
-    color:#d6cfc7;
-    text-align: center;
-}
-
-
 /*          INICIO            */
 
 
-.index1{
-    background-image: url(Imagenes/Diseño\ sin\ título\ \(9\).png);
+.main__inicio{
+  background-color: #9b815f;
+}
+
+.inicio{
+    background-image: url(Imagenes/FONDO.png);
     background-size: 70%;
     background-position: top center;
     background-repeat: no-repeat;
@@ -109,8 +77,14 @@ li{
   font-size: 1.75rem;
 }
 
-.main__p--texto{
-    color:#d6cfc7;
+.main__p--titulo{
+  color:#9b815f;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.75rem;
+}
+
+.main__p--subtitulo{
+    color:#9b815f;
     font-family: 'Special Elite', cursive;
     font-size: 1.25rem;
     padding-top: 1rem
@@ -122,7 +96,6 @@ li{
 
 .card1{
     background-color:#d6cfc7;
-    color:#9b815f;
     border-radius: 1rem;
 }
 
@@ -134,6 +107,15 @@ li{
 
 /*          QUIENES SOMOS          */
 
+.main__quienes{
+  background-color: #9b815f;
+}
+
+.hr__quienes{
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color:#d6cfc7
+}
 
 .imggrid1{
     width:50%;
@@ -145,7 +127,30 @@ li{
     border-radius: 1rem;
 }
 
-.main__p--quienes{
+.card2{
+  background-color:#d6cfc7;
+  color:#9b815f;
+  border-radius: 1rem;
+}
+
+
+.main__quienes--h2{
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
+
+.main__quienes--p{
+  font-size: 1.5rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
+
+.main__quienes--p2{
     color:#9b815f;
     font-family: 'Special Elite', cursive;
     font-size: 1.5rem;
@@ -155,12 +160,38 @@ li{
 /*          CATALOGO          */
 
 
+.hr__catalogo{
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color:#d6cfc7
+}
+
+.main__catalogo{
+  background-color: #9b815f;
+}    
+
+.main__catalogo--h2{
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
+
+.main__catalogo--p{
+  font-size: 1.5rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
+
 .imgcat{
     width:90%;
     border-radius: 1rem;
 }
 
-.main__p--cat{
+.main__catalogo--p2{
   color:#d6cfc7;
   font-family: 'Special Elite', cursive;
   font-size: 1.25rem;
@@ -169,6 +200,25 @@ li{
 
 
 /*          GALERIA         */
+
+
+.hr__galeria{
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color:#d6cfc7
+}
+
+.main__galeria{
+  background-color: #9b815f;
+}    
+
+.main__galeria--h2{
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
 
 
 .img{
@@ -182,7 +232,25 @@ li{
 }
 
 
-/*          FORMULARIO          */
+/*          CONTACTO          */
+
+.hr__contacto{
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color:#d6cfc7
+}
+
+.main__contacto{
+  background-color: #9b815f;
+}    
+
+.main__contacto--h2{
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'Special Elite', cursive;
+  color:#d6cfc7;
+  text-align: center;
+}
 
 .form{
     background-color: #d6cfc7;
@@ -217,6 +285,13 @@ li{
     font-family: 'Special Elite', cursive;
     color:#9b815f;
     font-size: 1.25rem;
+}
+
+
+.hr2{
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color:#9b815f
 }
 
 .footer1__iconos{
@@ -408,22 +483,20 @@ li{
 
 @media only screen and (max-width:768px){
   
-  .index1{
+  .inicio{
     background-size: 80%;
     font-size: 8vw;
-  }
-
-  .main__p{
-    color:#d6cfc7;
-    font-family: 'Special Elite', cursive;
-    padding: 1vw;
   }
 
   .main__p--chico{
     font-size: 1.5rem;
   }
+
+  .main__p--titulo{
+    font-size: 1.5rem;
+  }
   
-  .main__p--texto{
+  .main__p--subtitulo{
       font-size: 1rem;
   }
 
@@ -444,20 +517,32 @@ li{
     width: 50%;
   }
 
-  .main2__h2{
+  .main__quienes--h2{
+    font-size: 2.5rem;
+  }
+  
+  .main__quienes--p{
+    font-size: 1.25rem;
+  }
+  
+  .main__quienes--p2{
+    font-size: 1.25rem;
+  }
+
+  .main__catalogo--h2{
+    font-size: 2.5rem;
+  }
+  
+  .main__catalogo--p{
+    font-size: 1.25rem;
+  }
+
+  .main__galeria--h2{
     font-size: 2.5rem;
   }
 
- .main2__p{
-    font-size: 1.25rem;
-  }
-
-  .main__p--quienes{
-    font-size: 1.25rem;
-  }
-
-  .main__p--cat{
-    font-size: 1rem;
+  .main__contacto--h2{
+    font-size: 2.5rem;
   }
 
   .form{
