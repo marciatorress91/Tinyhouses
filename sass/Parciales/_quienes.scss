@@ -1,44 +1,47 @@
-.main__quienes{
-    background-color: #9b815f;
-    .main__quienes--h2{
+/*          QUIENES SOMOS        */
+
+
+.quienes{
+    background-color: $colormarron;
+    &__h2{
         font-size: 3rem;
         padding: 2rem;
         font-family: 'Special Elite', cursive;
-        color:#d6cfc7;
+        color: $colorbeige;
         text-align: center;
         @media only screen and (max-width:768px){
             font-size: 2.5rem;
         }
     }
-    .hr__quienes{
+    &__hr{
         border-style: solid;
         border-width: 0.15rem;
-        border-color:#d6cfc7
+        border-color: $colorbeige
     }
-    .main__quienes--p{
+    &__p{
         font-size: 1.5rem;
         padding: 2rem;
         font-family: 'Special Elite', cursive;
-        color:#d6cfc7;
+        color: $colorbeige;
         text-align: center;
         @media only screen and (max-width:768px){
             font-size: 1.25rem;
         }
     }
-    .imgequipo{
+    &__img{
         width:75%;
         border-radius: 1rem;
     }
-    .card2{
-        background-color:#d6cfc7;
-        color:#9b815f;
+    &__card{
+        background-color: $colorbeige;
+        color: $colormarron;
         border-radius: 1rem;
-        .imggrid1{
+        &--img{
             width:50%;
             border-radius: 1rem;
         }
-        .main__quienes--p2{
-            color:#9b815f;
+        &--p{
+            color: $colormarron;
             font-family: 'Special Elite', cursive;
             font-size: 1.5rem;
             @media only screen and (max-width:768px){

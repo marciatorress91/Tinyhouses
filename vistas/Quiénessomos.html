@@ -14,41 +14,49 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a href="../Index.html"><img src="../assets/LOGO SIN FONDO.png" alt="Logo Tiny Houses" class="logo fade-in"></a>
-              <button class="navbar-toggler boton__nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <a href="../Index.html"><img src="../assets/LOGO SIN FONDO.png" alt="Logo Tiny Houses" class="header__logo fade-in"></a>
+              <button class="navbar-toggler header__boton--nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center navbar1">
-                  <li class="nav-item">
-                    <a class="nav-link a" aria-current="page" href="../Index.html">INICIO</a>
+                <ul class="navbar-nav align-items-center header__navbar1">
+                  <li class="nav-item header__navbar1--li">
+                    <a class="nav-link header__navbar1--li--a" aria-current="page" href="../Index.html">INICIO</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link a" href="Quiénessomos.html">QUIÉNES SOMOS</a>
+                  <li class="nav-item header__navbar1--li">
+                    <a class="nav-link header__navbar1--li--a" href="Quiénessomos.html">QUIÉNES SOMOS</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link a" href="Catálogo.html">CATÁLOGO</a>
+                  <li class="nav-item dropdown header__navbar1--li">
+                    <a class=" btn-secondary dropdown-toggle nav-link header__navbar1--li--a" href="Catalogo.html" role="button" id="dropdownMenuLink" aria-expanded="false">
+                      CATÁLOGO
+                    </a>
+                  
+                    <ul class="dropdown-menu header__navbar1--li--navbar2" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item header__navbar1--li--navbar2--a2" href="Catalogo.html#Modelobrandy">MODELO BRANDY</a></li>
+                      <li><a class="dropdown-item header__navbar1--li--navbar2--a2" href="Catalogo.html#Modelojuly">MODELO JULY</a></li>
+                      <li><a class="dropdown-item header__navbar1--li--navbar2--a2" href="Catalogo.html#Modelomia">MODELO MIA</a></li>
+                    </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link a" href="Galería.html">GALERÍA</a>
+                  <li class="nav-item header__navbar1--li">
+                    <a class="nav-link header__navbar1--li--a" href="Galería.html">GALERÍA</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link a acontacto" href="Contacto.html">CONTACTO</a>
+                  <li class="nav-item header__navbar1--li">
+                    <a class="nav-link header__navbar1--li--a header__navbar1--li--acontacto" href="Contacto.html">CONTACTO</a>
                   </li>
                 </ul>
               </div>
             </div>
-          </nav>
+        </nav>
     </header>
     <!--CUERPO-->       
-    <main class="main__quienes">
+    <main class="quienes">
       <!--SECCION 1: QUIENES SOMOS-->
       <section>
-        <h2 class="main__quienes--h2">QUIÉNES SOMOS</h2> 
-        <hr class="hr__quienes">
-        <p class="main__quienes--p">Tiny Houses Uruguay es un estudio multidisciplinario. Trabajamos juntos para diseñar, proyectar e instalar las obras de las que estamos orgullosos. Tenemos diseños predeterminados como son BRANDY, JULY y MIA, pero también podemos crear la casa de tus sueños. Trabajamos junto con el cliente para lograr los objetivos deseados.</p>
+        <h2 class="quienes__h2">QUIÉNES SOMOS</h2> 
+        <hr class="quienes__hr">
+        <p class="quienes__p">Tiny Houses Uruguay es un estudio multidisciplinario. Trabajamos juntos para diseñar, proyectar e instalar las obras de las que estamos orgullosos. Tenemos diseños predeterminados como son BRANDY, JULY y MIA, pero también podemos crear la casa de tus sueños. Trabajamos junto con el cliente para lograr los objetivos deseados.</p>
         <div class="d-flex justify-content-center">
-          <img src="../assets/Equipo1.jpg" alt="Imagen del equipo de trabajo en una oficina" class="imgequipo">
+          <img src="../assets/Equipo1.jpg" alt="Imagen del equipo de trabajo en una oficina" class="quienes__img">
         </div>
       </section>
       <!--SECCION 2: CARROUSEL-->
@@ -60,26 +68,26 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="card align-items-center card2 pt-4 mx-auto" style="width: 50%">
-              <img src="../assets/Integrante1.png" alt="Imagen de mujer integrante del equipo" class="card-img-top imggrid1">
+            <div class="card align-items-center quienes__card pt-4 mx-auto" style="width: 50%">
+              <img src="../assets/Integrante1.png" alt="Imagen de mujer integrante del equipo" class="card-img-top quienes__card--img">
               <div class="card-body text-center">
-                <h5 class="card-title main__quienes--p2 card2">Ing. Civil</h5>
+                <h5 class="card-title quienes__card--p">Ing. Civil</h5>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card align-items-center card2 pt-4 mx-auto" style="width: 50%">
-              <img src="../assets/Integrante2.png" alt="Imagen de hombre integrante del equipo" class="card-img-top imggrid1">
+            <div class="card align-items-center quienes__card pt-4 mx-auto" style="width: 50%">
+              <img src="../assets/Integrante2.png" alt="Imagen de hombre integrante del equipo" class="card-img-top quienes__card--img">
               <div class="card-body text-center">
-              <h5 class="card-title main__quienes--p2 card2">Arquitecto</h5>
+              <h5 class="card-title quienes__card--p">Arquitecto</h5>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card align-items-center card2 pt-4 mx-auto" style="width: 50%">
-              <img src="../assets/Integrante3.png" alt="Imagen de mujer integrante del equipo" class="card-img-top imggrid1">
+            <div class="card align-items-center quienes__card pt-4 mx-auto" style="width: 50%">
+              <img src="../assets/Integrante3.png" alt="Imagen de mujer integrante del equipo" class="card-img-top quienes__card--img">
               <div class="card-body text-center">
-              <h5 class="card-title main__quienes--p2 card2">Diseñadora</h5>
+              <h5 class="card-title quienes__card--p">Diseñadora</h5>
               </div>
             </div>
           </div>
@@ -97,7 +105,7 @@
     <!--PIE DE PAGINA-->
     <footer>
       <!--Seccion 1: Contacto-->
-      <section class="footer1">
+      <section class="footer">
         <div class="container-fluid text-center pt-4">
           <div class="row">
             <div class="col-md-6 mx-auto mb-3">
@@ -111,23 +119,23 @@
               <p><i class="bi bi-telephone-fill me-3"></i>+ 598 99 123 456</p>
             </div>
           </div>
-          <hr class="hr2 m-0">
+          <hr class="footer__hr m-0">
         </div>
       </section>
       <!--Seccion 2: Redes sociales-->
-      <section class="d-flex justify-content-center align-items-center p-4 footer1">
+      <section class="d-flex justify-content-center align-items-center p-4 footer">
         <div class="d-none d-sm-block text">
           <p class="m-0 pe-4">Seguinos en las redes sociales</p>
         </div>
         <div>
-          <a href="https://es-la.facebook.com/itinyhouses/"><img src="../assets/Facebook-SIN FONDO.png" alt="" class="footer1__iconos"></a>
-          <a href="https://www.instagram.com/tiny.houses/?hl=es"><img src="../assets/IG-SIN FONDO.png" alt="" class="footer1__iconos"></a>
+          <a href="https://es-la.facebook.com/itinyhouses/"><img src="../assets/Facebook-SIN FONDO.png" alt="" class="footer__iconos"></a>
+          <a href="https://www.instagram.com/tiny.houses/?hl=es"><img src="../assets/IG-SIN FONDO.png" alt="" class="footer__iconos"></a>
         </div>
       </section>
       <!--Seccion 3: Copyright-->
       <div class="text-center p-4 copyright d-flex justify-content-center">
         <p class="m-0 pe-1">© 2022 Copyright:</p>
-        <a class="fw-bold afooter" href="../Index.html">TinyHousesUY</a>
+        <a class="fw-bold copyright__a" href="../Index.html">TinyHousesUY</a>
       </div>
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

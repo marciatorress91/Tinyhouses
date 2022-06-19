@@ -1,14 +1,17 @@
-.main__inicio{
-    background-color: #9b815f;
-    .inicio{
+/*          INICIO        */
+
+
+.inicio{
+    background-color: $colormarron;
+    &__main{
         background-image: url(Imagenes/FONDO.png);
         background-size: 70%;
         background-position: top center;
         background-repeat: no-repeat;
         font-size: 6vw;
-        text-shadow: #9b815f 5px 1px 2px;
-        .main__p{
-            color:#d6cfc7;
+        text-shadow: $colormarron 5px 1px 2px;
+        &--p{
+            color: $colorbeige;
             font-family: 'Special Elite', cursive;
             padding: 1vw;
         }
@@ -29,38 +32,38 @@
                     animation: bounce-in-top 1.1s 1.6s both;
         }
     }
-    .logo2{
+    &__logo{
         width: 70%;
         @media only screen and (max-width:768px){
             width: 50%;
         }
     }
-    .main__p--chico{
-        color:#d6cfc7;
+    &__p{
+        color: $colorbeige;
         font-family: 'Special Elite', cursive;
         font-size: 1.75rem;
         @media only screen and (max-width:768px){
             font-size: 1.5rem;
         }
     }
-    .card1{
-        background-color:#d6cfc7;
-        color:#9b815f;
+    &__card{
+        background-color: $colorbeige;
+        color: $colormarron;
         border-radius: 1rem;
-        .imggrid{
+        &--img{
             width:75%;
             border-radius: 1rem;
         }
-        .main__p--titulo{
-            color:#9b815f;
+        &--titulo{
+            color: $colormarron;
             font-family: 'Special Elite', cursive;
             font-size: 1.75rem;
             @media only screen and (max-width:768px){
                 font-size: 1.5rem;
             }
         }
-        .main__p--subtitulo{
-            color:#9b815f;
+        &--subtitulo{
+            color: $colormarron;
             font-family: 'Special Elite', cursive;
             font-size: 1.25rem;
             padding-top: 1rem;

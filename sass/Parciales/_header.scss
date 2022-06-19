@@ -1,0 +1,77 @@
+/*          ENCABEZADO         */
+
+
+.header{
+    background-color: $colormarron;
+    &__logo{
+        width: 12.5rem;
+        height: 12.5rem;
+        @media only screen and (max-width:768px){
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    .fade-in {
+        -webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    
+    &__boton--nav{
+      background-color: $colorbeige;
+    }
+    .navbar-toggler{
+        color: #604B2F; 
+    }
+
+    &__navbar1{
+        background-color: $colorbeige;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        &--li{
+            margin: 0 0.8rem;
+            &--a{
+                color: $colormarron;
+                font-family: 'Special Elite', cursive;
+                font-size: 1.25rem;
+                text-align: center;
+                &:hover{color: #fff6ea;}
+                @media only screen and (max-width:768px){
+                    font-size: 1rem;
+                }
+            }
+            &--acontacto{
+                color: $colorbeige;
+                background-color: $colormarron;
+                border-radius: 0.5rem;
+            }
+            &--navbar2{
+                background-color: $colorbeige;
+                padding: 1rem;
+                border-style: none;
+                text-align: center;
+                &--a2{
+                    color: $colormarron;
+                    font-family: 'Special Elite', cursive;
+                    font-size: 1rem;
+                    &:hover{
+                        color: #fff6ea;
+                        background-color: $colorbeige
+                    }
+                    @media only screen and (max-width:992px){
+                        color: $colorbeige;
+                        &:hover{
+                            color: #fff6ea;
+                            background-color: $colormarron}
+                        }
+                }
+                @media only screen and (max-width:992px){
+                    background-color: $colormarron;
+                }
+            }
+         }
+         .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; // remove the gap so it doesn't close
+         }
+    }
+}

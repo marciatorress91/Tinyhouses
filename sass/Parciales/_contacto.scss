@@ -1,38 +1,40 @@
-.main__contacto{
-    background-color: #9b815f;
-    .main__contacto--h2{
+/*          CONTACTO         */
+
+
+.contacto{
+    background-color: $colormarron;
+    &__h2{
         font-size: 3rem;
         padding: 2rem;
         font-family: 'Special Elite', cursive;
-        color:#d6cfc7;
+        color:$colorbeige;
         text-align: center;
         @media only screen and (max-width:768px){
             font-size: 2.5rem;
         }
     }
-    .hr__contacto{
+    &__hr{
         border-style: solid;
         border-width: 0.15rem;
-        border-color:#d6cfc7
+        border-color: $colorbeige
     }
-    .form{
-        background-color: #d6cfc7;
+    &__form{
+        background-color: $colorbeige;
         border-radius: 1rem;
         width: 70%;
         font-family: 'Special Elite', cursive;
-        color: #9b815f;
+        color: $colormarron;
         @media only screen and (max-width:768px){
             width: 100%;
         }
     }
-    .botones{
+    &__botones{
         font-family: 'Special Elite', cursive;
         font-size: 1rem;
-        color:#d6cfc7;
-        background-color:#9b815f;
+        color: $colorbeige;
+        background-color: $colormarron;
         border: none;
         padding: 1rem;
-        cursor: pointer;
         border-radius: 1rem;
         opacity: 0.8;
         &:hover {

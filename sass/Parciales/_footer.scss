@@ -1,7 +1,10 @@
-.footer1{
-    background-color:#d6cfc7;
+/*          PIE DE PAGINA         */
+
+
+.footer{
+    background-color:$colorbeige;
     font-family: 'Special Elite', cursive;
-    color:#9b815f;
+    color:$colormarron;
     font-size: 1.25rem;
     &__iconos{
         width:2.5rem;
@@ -11,10 +14,10 @@
             opacity:1
         }
     }
-    .hr2{
+    &__hr{
         border-style: solid;
         border-width: 0.15rem;
-        border-color:#9b815f
+        border-color:$colormarron
     }
     @media only screen and (max-width:768px){
         font-size: 1rem;
@@ -22,10 +25,10 @@
 }
 
 .copyright{
-    background-color: #9b815f;
-    color:#d6cfc7;
-    .afooter{opacity: 0.8;
-        color:#d6cfc7;
+    background-color: $colormarron;
+    color:$colorbeige;
+    &__a{opacity: 0.8;
+        color: $colorbeige;
         &:link {
             opacity: 0.8;
         }
