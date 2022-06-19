@@ -2,9 +2,9 @@
 
 
 .footer{
-    background-color:$colorbeige;
+    background-color: map-get($colores,"beige");
     font-family: 'Special Elite', cursive;
-    color:$colormarron;
+    color: map-get($colores,"marron");
     font-size: 1.25rem;
     &__iconos{
         width:2.5rem;
@@ -15,9 +15,8 @@
         }
     }
     &__hr{
-        border-style: solid;
-        border-width: 0.15rem;
-        border-color:$colormarron
+        @include hr;
+        border-color: map-get($colores,"marron")
     }
     @media only screen and (max-width:768px){
         font-size: 1rem;
@@ -25,21 +24,21 @@
 }
 
 .copyright{
-    background-color: $colormarron;
-    color:$colorbeige;
+    background-color: map-get($colores,"marron");
+    color: map-get($colores,"beige");
     &__a{opacity: 0.8;
-        color: $colorbeige;
+        color: map-get($colores,"beige");
         &:link {
             opacity: 0.8;
         }
         &:visited {
-            color: #00C2CB;
+            color: map-get($colores,"turquesa");
         }
         &:hover {
             opacity: 1;
         }
         &:active {
-            color: #604B2F;
+            color: map-get($colores,"marronoscuro");
         }
     }
 }

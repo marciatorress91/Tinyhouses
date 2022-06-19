@@ -2,38 +2,21 @@
 
 
 .catalogo{
-    background-color: $colormarron;
+    background-color: map-get($colores,"marron");
     &__h2{
-        font-size: 3rem;
-        padding: 2rem;
-        font-family: 'Special Elite', cursive;
-        color: $colorbeige;
-        text-align: center;
-        @media only screen and (max-width:768px){
-            font-size: 2.5rem;
-        }
+        @include h2
     }
     &__hr{
-        border-style: solid;
-        border-width: 0.15rem;
-        border-color: $colorbeige
+        @include hr
     }
     &__p{
-        font-size: 1.5rem;
-        padding: 2rem;
-        font-family: 'Special Elite', cursive;
-        color: $colorbeige;
-        text-align: center;
-        @media only screen and (max-width:768px){
-            font-size: 1.25rem;
-        }
+        @include p
     }
     &__img{
-        width:90%;
-        border-radius: 1rem;
+        @include img
     }
     &__p2{
-        color: $colorbeige;
+        color: map-get($colores,"beige");
         font-family: 'Special Elite', cursive;
         font-size: 1.25rem;
         text-align: center;

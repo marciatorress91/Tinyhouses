@@ -2,46 +2,27 @@
 
 
 .quienes{
-    background-color: $colormarron;
+    background-color: map-get($colores,"marron");
     &__h2{
-        font-size: 3rem;
-        padding: 2rem;
-        font-family: 'Special Elite', cursive;
-        color: $colorbeige;
-        text-align: center;
-        @media only screen and (max-width:768px){
-            font-size: 2.5rem;
-        }
+        @include h2
     }
     &__hr{
-        border-style: solid;
-        border-width: 0.15rem;
-        border-color: $colorbeige
+        @include hr
     }
     &__p{
-        font-size: 1.5rem;
-        padding: 2rem;
-        font-family: 'Special Elite', cursive;
-        color: $colorbeige;
-        text-align: center;
-        @media only screen and (max-width:768px){
-            font-size: 1.25rem;
-        }
+        @include p
     }
     &__img{
-        width:75%;
-        border-radius: 1rem;
+        @include img
     }
     &__card{
-        background-color: $colorbeige;
-        color: $colormarron;
-        border-radius: 1rem;
+        @include card;
         &--img{
             width:50%;
             border-radius: 1rem;
         }
         &--p{
-            color: $colormarron;
+            color: map-get($colores,"marron");
             font-family: 'Special Elite', cursive;
             font-size: 1.5rem;
             @media only screen and (max-width:768px){

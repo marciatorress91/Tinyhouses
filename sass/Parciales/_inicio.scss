@@ -2,16 +2,16 @@
 
 
 .inicio{
-    background-color: $colormarron;
+    background-color: map-get($colores,"marron");
     &__main{
         background-image: url(Imagenes/FONDO.png);
         background-size: 70%;
         background-position: top center;
         background-repeat: no-repeat;
         font-size: 6vw;
-        text-shadow: $colormarron 5px 1px 2px;
+        text-shadow: map-get($colores,"marron") 5px 1px 2px;
         &--p{
-            color: $colorbeige;
+            color: map-get($colores,"beige");
             font-family: 'Special Elite', cursive;
             padding: 1vw;
         }
@@ -39,23 +39,21 @@
         }
     }
     &__p{
-        color: $colorbeige;
+        color: map-get($colores,"beige");
         font-family: 'Special Elite', cursive;
         font-size: 1.75rem;
         @media only screen and (max-width:768px){
             font-size: 1.5rem;
         }
     }
-    &__card{
-        background-color: $colorbeige;
-        color: $colormarron;
-        border-radius: 1rem;
+    &__card{    
+        @include card;
         &--img{
             width:75%;
             border-radius: 1rem;
         }
         &--titulo{
-            color: $colormarron;
+            color: map-get($colores,"marron");
             font-family: 'Special Elite', cursive;
             font-size: 1.75rem;
             @media only screen and (max-width:768px){
@@ -63,7 +61,7 @@
             }
         }
         &--subtitulo{
-            color: $colormarron;
+            color: map-get($colores,"marron");
             font-family: 'Special Elite', cursive;
             font-size: 1.25rem;
             padding-top: 1rem;
