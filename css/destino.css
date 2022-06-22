@@ -24,48 +24,48 @@
     background-color: #d6cfc7; }
   .header .navbar-toggler {
     color: #604B2F; }
-  .header__navbar1 {
+  .header .navbar1 {
     background-color: #d6cfc7;
     padding: 1rem;
     border-radius: 0.5rem; }
-    .header__navbar1--li {
+    .header .navbar1__li {
       margin: 0 0.8rem; }
-      .header__navbar1--li--a, .header__navbar1--li--acontacto {
+      .header .navbar1__li--a, .header .navbar1__li--acontacto {
         color: #9b815f;
         font-family: 'Special Elite', cursive;
         font-size: 1.25rem;
         text-align: center; }
-        .header__navbar1--li--a:hover, .header__navbar1--li--acontacto:hover {
+        .header .navbar1__li--a:hover, .header .navbar1__li--acontacto:hover {
           color: #fff6ea; }
         @media only screen and (max-width: 768px) {
-          .header__navbar1--li--a, .header__navbar1--li--acontacto {
+          .header .navbar1__li--a, .header .navbar1__li--acontacto {
             font-size: 1rem; } }
-      .header__navbar1--li--acontacto {
+      .header .navbar1__li--acontacto {
         color: #d6cfc7;
         background-color: #9b815f;
         border-radius: 0.5rem; }
-      .header__navbar1--li--navbar2 {
+      .header .navbar1__li .navbar2 {
         background-color: #d6cfc7;
         padding: 1rem;
         border-style: none;
         text-align: center; }
-        .header__navbar1--li--navbar2--a2 {
+        .header .navbar1__li .navbar2__a2 {
           color: #9b815f;
           font-family: 'Special Elite', cursive;
           font-size: 1rem; }
-          .header__navbar1--li--navbar2--a2:hover {
+          .header .navbar1__li .navbar2__a2:hover {
             color: #fff6ea;
             background-color: #d6cfc7; }
           @media only screen and (max-width: 992px) {
-            .header__navbar1--li--navbar2--a2 {
+            .header .navbar1__li .navbar2__a2 {
               color: #d6cfc7; }
-              .header__navbar1--li--navbar2--a2:hover {
+              .header .navbar1__li .navbar2__a2:hover {
                 color: #fff6ea;
                 background-color: #9b815f; } }
         @media only screen and (max-width: 992px) {
-          .header__navbar1--li--navbar2 {
+          .header .navbar1__li .navbar2 {
             background-color: #9b815f; } }
-    .header__navbar1 .dropdown:hover .dropdown-menu {
+    .header .navbar1 .dropdown:hover .dropdown-menu {
       display: block;
       margin-top: 0; }
 

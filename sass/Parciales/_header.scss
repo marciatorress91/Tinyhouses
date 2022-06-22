@@ -23,11 +23,11 @@
         color: map-get($colores,"marronoscuro"); 
     }
 
-    &__navbar1{
+    .navbar1{
         background-color: map-get($colores,"beige");
         padding: 1rem;
         border-radius: 0.5rem;
-        &--li{
+        &__li{
             margin: 0 0.8rem;
             &--a{
                 color: map-get($colores,"marron");
@@ -40,17 +40,17 @@
                 }
             }
             &--acontacto{
-                @extend .header__navbar1--li--a;
+                @extend .navbar1__li--a;
                 color: map-get($colores,"beige");
                 background-color: map-get($colores,"marron");
                 border-radius: 0.5rem;
             }
-            &--navbar2{
+            .navbar2{
                 background-color: map-get($colores,"beige");
                 padding: 1rem;
                 border-style: none;
                 text-align: center;
-                &--a2{
+                &__a2{
                     color: map-get($colores,"marron");
                     font-family: 'Special Elite', cursive;
                     font-size: 1rem;
