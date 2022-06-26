@@ -3,7 +3,7 @@
 
 .footer{
     background-color: map-get($colores,"beige");
-    font-family: 'Special Elite', cursive;
+    font-family: $fuente;
     color: map-get($colores,"marron");
     font-size: 1.25rem;
     &__iconos{

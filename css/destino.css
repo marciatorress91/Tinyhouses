@@ -32,7 +32,7 @@
       margin: 0 0.8rem; }
       .header .navbar1__li--a, .header .navbar1__li--acontacto {
         color: #9b815f;
-        font-family: 'Special Elite', cursive;
+        font-family: "Special Elite", cursive;
         font-size: 1.25rem;
         text-align: center; }
         .header .navbar1__li--a:hover, .header .navbar1__li--acontacto:hover {
@@ -51,7 +51,7 @@
         text-align: center; }
         .header .navbar1__li .navbar2__a2 {
           color: #9b815f;
-          font-family: 'Special Elite', cursive;
+          font-family: "Special Elite", cursive;
           font-size: 1rem; }
           .header .navbar1__li .navbar2__a2:hover {
             color: #fff6ea;
@@ -72,7 +72,7 @@
 /*          PIE DE PAGINA         */
 .footer {
   background-color: #d6cfc7;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   color: #9b815f;
   font-size: 1.25rem; }
   .footer__iconos {
@@ -117,7 +117,7 @@
     text-shadow: #9b815f 5px 1px 2px; }
     .inicio__main--p {
       color: #d6cfc7;
-      font-family: 'Special Elite', cursive;
+      font-family: "Special Elite", cursive;
       padding: 1vw; }
     @media only screen and (max-width: 768px) {
       .inicio__main {
@@ -139,7 +139,7 @@
         width: 50%; } }
   .inicio__p {
     color: #d6cfc7;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     font-size: 1.75rem; }
     @media only screen and (max-width: 768px) {
       .inicio__p {
@@ -153,14 +153,14 @@
       border-radius: 1rem; }
     .inicio__card--titulo {
       color: #9b815f;
-      font-family: 'Special Elite', cursive;
+      font-family: "Special Elite", cursive;
       font-size: 1.75rem; }
       @media only screen and (max-width: 768px) {
         .inicio__card--titulo {
           font-size: 1.5rem; } }
     .inicio__card--subtitulo {
       color: #9b815f;
-      font-family: 'Special Elite', cursive;
+      font-family: "Special Elite", cursive;
       font-size: 1.25rem;
       padding-top: 1rem; }
       @media only screen and (max-width: 768px) {
@@ -173,7 +173,7 @@
   .quienes__h2 {
     font-size: 3rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -186,7 +186,7 @@
   .quienes__p {
     font-size: 1.5rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -204,7 +204,7 @@
       border-radius: 1rem; }
     .quienes__card--p {
       color: #9b815f;
-      font-family: 'Special Elite', cursive;
+      font-family: "Special Elite", cursive;
       font-size: 1.5rem; }
       @media only screen and (max-width: 768px) {
         .quienes__card--p {
@@ -216,7 +216,7 @@
   .catalogo__h2 {
     font-size: 3rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -229,7 +229,7 @@
   .catalogo__p {
     font-size: 1.5rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -240,7 +240,7 @@
     border-radius: 1rem; }
   .catalogo__p2 {
     color: #d6cfc7;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     font-size: 1.25rem;
     text-align: center; }
 
@@ -250,7 +250,7 @@
   .galeria__h2 {
     font-size: 3rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -273,7 +273,7 @@
   .contacto__h2 {
     font-size: 3rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #d6cfc7;
     text-align: center; }
     @media only screen and (max-width: 768px) {
@@ -287,13 +287,13 @@
     background-color: #d6cfc7;
     border-radius: 1rem;
     width: 70%;
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     color: #9b815f; }
     @media only screen and (max-width: 768px) {
       .contacto__form {
         width: 100%; } }
   .contacto__botones {
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     font-size: 1rem;
     color: #d6cfc7;
     background-color: #9b815f;

@@ -1,7 +1,7 @@
 @mixin h2 {
     font-size: 3rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: $fuente;
     color: map-get($colores,"beige");
     text-align: center;
     @media only screen and (max-width:768px){
@@ -18,7 +18,7 @@
 @mixin p {
     font-size: 1.5rem;
     padding: 2rem;
-    font-family: 'Special Elite', cursive;
+    font-family: $fuente;
     color: map-get($colores,"beige");
     text-align: center;
     @media only screen and (max-width:768px){

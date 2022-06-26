@@ -12,7 +12,7 @@
         text-shadow: map-get($colores,"marron") 5px 1px 2px;
         &--p{
             color: map-get($colores,"beige");
-            font-family: 'Special Elite', cursive;
+            font-family: $fuente;
             padding: 1vw;
         }
         @media only screen and (max-width:768px){
@@ -40,7 +40,7 @@
     }
     &__p{
         color: map-get($colores,"beige");
-        font-family: 'Special Elite', cursive;
+        font-family: $fuente;
         font-size: 1.75rem;
         @media only screen and (max-width:768px){
             font-size: 1.5rem;
@@ -54,7 +54,7 @@
         }
         &--titulo{
             color: map-get($colores,"marron");
-            font-family: 'Special Elite', cursive;
+            font-family: $fuente;
             font-size: 1.75rem;
             @media only screen and (max-width:768px){
                 font-size: 1.5rem;
@@ -62,7 +62,7 @@
         }
         &--subtitulo{
             color: map-get($colores,"marron");
-            font-family: 'Special Elite', cursive;
+            font-family: $fuente;
             font-size: 1.25rem;
             padding-top: 1rem;
             @media only screen and (max-width:768px){

@@ -31,7 +31,7 @@
             margin: 0 0.8rem;
             &--a{
                 color: map-get($colores,"marron");
-                font-family: 'Special Elite', cursive;
+                font-family: $fuente;
                 font-size: 1.25rem;
                 text-align: center;
                 &:hover{color: map-get($colores,"blanco");}
@@ -52,7 +52,7 @@
                 text-align: center;
                 &__a2{
                     color: map-get($colores,"marron");
-                    font-family: 'Special Elite', cursive;
+                    font-family: $fuente;
                     font-size: 1rem;
                     &:hover{
                         color: map-get($colores,"blanco");

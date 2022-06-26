@@ -17,7 +17,7 @@
     }
     &__p2{
         color: map-get($colores,"beige");
-        font-family: 'Special Elite', cursive;
+        font-family: $fuente;
         font-size: 1.25rem;
         text-align: center;
       }

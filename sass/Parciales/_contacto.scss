@@ -13,14 +13,14 @@
         background-color: map-get($colores,"beige");
         border-radius: 1rem;
         width: 70%;
-        font-family: 'Special Elite', cursive;
+        font-family: $fuente;
         color: map-get($colores,"marron");
         @media only screen and (max-width:768px){
             width: 100%;
         }
     }
     &__botones{
-        font-family: 'Special Elite', cursive;
+        font-family: $fuente;
         font-size: 1rem;
         color: map-get($colores,"beige");
         background-color: map-get($colores,"marron");
