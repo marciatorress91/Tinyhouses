@@ -6,9 +6,13 @@
     &__logo{
         width: 12.5rem;
         height: 12.5rem;
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width:992px){
             width: 10rem;
             height: 10rem;
+        }
+        @media only screen and (max-width:768px){
+            width: 8rem;
+            height: 8rem;
         }
     }
     .fade-in {
@@ -27,6 +31,7 @@
         background-color: map-get($colores,"beige");
         padding: 1rem;
         border-radius: 0.5rem;
+        
         &__li{
             margin: 0 0.8rem;
             &--a{
@@ -44,6 +49,9 @@
                 color: map-get($colores,"beige");
                 background-color: map-get($colores,"marron");
                 border-radius: 0.5rem;
+            }
+            &--activo{
+                color: map-get($colores,"marronoscuro");
             }
             .navbar2{
                 background-color: map-get($colores,"beige");

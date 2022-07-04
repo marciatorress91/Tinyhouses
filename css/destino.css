@@ -13,10 +13,14 @@
   .header__logo {
     width: 12.5rem;
     height: 12.5rem; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       .header__logo {
         width: 10rem;
         height: 10rem; } }
+    @media only screen and (max-width: 768px) {
+      .header__logo {
+        width: 8rem;
+        height: 8rem; } }
   .header .fade-in {
     -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
@@ -44,6 +48,8 @@
         color: #d6cfc7;
         background-color: #9b815f;
         border-radius: 0.5rem; }
+      .header .navbar1__li--activo {
+        color: #604B2F; }
       .header .navbar1__li .navbar2 {
         background-color: #d6cfc7;
         padding: 1rem;
@@ -300,7 +306,8 @@
     border: none;
     padding: 1rem;
     border-radius: 1rem;
-    opacity: 0.8; }
+    opacity: 0.8;
+    width: 6rem; }
     .contacto__botones:hover {
       opacity: 1; }
 
