@@ -1,0 +1,15 @@
+/*          COTIZACION        */
+
+
+.cotizacion{
+    background-color: map-get($colores,"marron");
+    &__h2{
+        @include h2
+    }
+    &__hr{
+        @include hr
+    }
+    &__p{
+        @include p
+    }
+}

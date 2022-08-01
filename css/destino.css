@@ -250,6 +250,32 @@
     font-size: 1.25rem;
     text-align: center; }
 
+/*          COTIZACION        */
+.cotizacion {
+  background-color: #9b815f; }
+  .cotizacion__h2 {
+    font-size: 3rem;
+    padding: 2rem;
+    font-family: "Special Elite", cursive;
+    color: #d6cfc7;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .cotizacion__h2 {
+        font-size: 2.5rem; } }
+  .cotizacion__hr {
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: #d6cfc7; }
+  .cotizacion__p {
+    font-size: 1.5rem;
+    padding: 2rem;
+    font-family: "Special Elite", cursive;
+    color: #d6cfc7;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .cotizacion__p {
+        font-size: 1.25rem; } }
+
 /*          GALERIA         */
 .galeria {
   background-color: #9b815f; }
