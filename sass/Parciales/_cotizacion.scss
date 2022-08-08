@@ -10,6 +10,103 @@
         @include hr
     }
     &__p{
-        @include p
+        @include p;
+        font-size: 2rem;
+
+    }
+    &__form{
+        background-color: map-get($colores,"beige");
+        font-size: 1rem;
+        width: 75%;
+        padding: 1rem;
+        font-family: $fuente;
+        color: map-get($colores,"marron");
+        @media only screen and (max-width:991px){
+            width: 50%;
+        }
+    }
+    
+    &__botones{
+        font-family: $fuente;
+        font-size: 1rem;
+        color: map-get($colores,"marron");
+        background-color: map-get($colores,"beige");
+        border: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        opacity: 0.8;
+        width: 6rem;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__card{
+        background-color: map-get($colores,"beige");
+        border:none;
+        font-family: $fuente;
+        color: map-get($colores,"marron");
+        &--boton{
+            color: map-get($colores,"beige");
+            background-color: map-get($colores,"marron");
+            text-decoration: none;
+            border-radius: 1rem;
+            opacity: 0.8;
+            padding: 1rem;
+            width: 60%;
+            &:hover {
+                opacity: 1;
+                color: map-get($colores,"beige");
+            }
+        }
+        &--hr{
+            border-style: solid;
+            border-width: 0.15rem;
+            border-color: map-get($colores,"marron")
+        }
+    }
+    &__personalizado{
+        background-color: map-get($colores,"beige");
+        border-radius: 1rem;
+        width: 70%;
+        font-family: $fuente;
+        color: map-get($colores,"marron");
+        @media only screen and (max-width:768px){
+            width: 100%;
+        }
+        &--p{
+            font-size: 1.25rem;
+            padding: 2rem;
+            font-family: $fuente;
+            color: map-get($colores,"marron");
+            text-align: center;
+            @media only screen and (max-width:768px){
+                    font-size: 1rem;
+            }
+        }
+        &--botones{
+            font-family: $fuente;
+            font-size: 1rem;
+            color: map-get($colores,"beige");
+            background-color: map-get($colores,"marron");
+            border: none;
+            padding: 1rem;
+            border-radius: 1rem;
+            opacity: 0.8;
+            width: 6rem;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &--input{
+            font-family: $fuente;
+            font-size: 1rem;
+            color: map-get($colores,"marron");
+            width: 40%;
+        }
+    }
+    &__notfound{
+        font-family: $fuente;
+        font-size: 1,5rem;
+        color: map-get($colores,"beige");
     }
 }
