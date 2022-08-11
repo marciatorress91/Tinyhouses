@@ -86,12 +86,57 @@
                 </select>
               </div>
               <div class="col-lg-3 mx-auto pt-1 pb-5 text-center">
-                <button class="cotizacion__botones" type="button" onclick="filtrarModelos()">Filtrar</button>
+                <button class="cotizacion__botones" type="button" onclick="llamarModelos()">Filtrar</button>
               </div>
             </div>
             <div class="row justify-content-evenly" id="resultados">
             </div>
           </section>
+          <!--SECCION: COTIZACIÓN PERSONALIZADA-->
+        <hr class="cotizacion__hr">
+        <p class="cotizacion__p mb-0">Personalizá tu cotización:</p>
+        <section class="pb-5">
+          <form class="cotizacion__personalizado container-fluid p-4">
+            <div class="row">
+              <div class="col-sm-6 mx-auto p-1 d-flex justify-content-center">
+                <p class="cotizacion__personalizado--p mb-0">Ingrese los m<sup>2</sup>:</p>
+              </div>
+              <div class="col-sm-6 form-floating cotizacion__personalizado--input mx-auto pt-1 d-flex justify-content-center">
+                <input type="number" class="form-control" id="metraje1" placeholder="Metraje" required>
+                <label for="Number">Valor entre 15 y 60*</label>
+              </div>
+              <p class="cotizacion__personalizado--mensaje text-center p-1" style="text-transform: none;" id="valor1"></p>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 mx-auto p-1 d-flex justify-content-center">
+                <p class="cotizacion__personalizado--p mb-0">Ingrese NºHabitaciones:</p>
+              </div>
+              <div class="col-sm-6 form-floating cotizacion__personalizado--input mx-auto pt-1 d-flex justify-content-center">
+                <input type="number" class="form-control" id="habitaciones1" placeholder="Habitaciones" required>
+                <label for="Number">Valor entre 0 y 3*</label>
+              </div>
+              <p class="cotizacion__personalizado--mensaje text-center p-1" style="text-transform: none;" id="valor2"></p>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 mx-auto p-1 d-flex justify-content-center">
+                <p class="cotizacion__personalizado--p mb-0">Desea qué la casa tenga ruedas?:</p>
+              </div>
+              <div class="col-sm-6 form-floating cotizacion__personalizado--input mx-auto pt-1 d-flex justify-content-center">
+                <input type="text" class="form-control" id="ruedas1" placeholder="Ruedas" required>
+                <label for="Text">si o no*</label>
+              </div>
+              <p class="cotizacion__personalizado--mensaje text-center p-1" style="text-transform: none;" id="valor3"></p>
+            </div>
+            <div class="row text-center">
+              <div class="col-sm-6 p-2">
+              <button class="cotizacion__personalizado--botones" type="button" onclick="calculo()">Cotizar</button>
+            </div>
+            <div class="col-sm-6 p-2">
+              <button class="cotizacion__personalizado--botones" type="reset" onclick="borrar()">Borrar</button>
+            </div>
+            <h5 class="p-4" style="text-transform: none;" id="valor"></h5>
+          </form>
+        </section>
     </main>        
     <!--PIE DE PAGINA-->
     <footer>

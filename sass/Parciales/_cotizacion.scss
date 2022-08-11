@@ -103,10 +103,15 @@
             color: map-get($colores,"marron");
             width: 40%;
         }
+        &--mensaje{
+            font-size: 0.8rem;
+            color: map-get($colores,"marronoscuro");
+        }
     }
     &__notfound{
         font-family: $fuente;
-        font-size: 1,5rem;
+        font-size: 1.5rem;
         color: map-get($colores,"beige");
+        text-align: center;
     }
 }

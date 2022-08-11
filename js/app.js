@@ -1,4 +1,5 @@
-// Modelo predefinidos //
+// 		MODELOS PREDEFINIDOS	 //
+
 
 // Funcion constructora de objetos //
 
@@ -30,9 +31,10 @@ function crearArray(){
 
 	return array
 }
- 
+
 // Esta funcion se llama cuando presiono "Filtrar" desde el HTML
-function filtrarModelos() {
+
+function llamarModelos() {
  
 	//tomo las claves de busqueda del HTML
 	let metraje = document.getElementById("metraje").value.toLowerCase()
@@ -40,42 +42,38 @@ function filtrarModelos() {
 	let ruedas = document.getElementById("ruedas").value.toLowerCase()
   
 	listarModelos(metraje, habitaciones, ruedas)
-  }
-
+}
+      
 // Genero listado en HTML
-function listarModelos(metraje, habitaciones, ruedas){
 
-	//selecciono elemento HTML dentro del cual se mostraran los resultados de la busqueda
-	const htmlfiltromodelos = document.getElementById("resultados")
+function listarModelos(metraje, habitaciones, ruedas){
   
 	let fragment = ""
-	
-	//recorro el array
-	modelos.forEach((mod) => {
-    
-	  if((metraje == mod.metraje || metraje == "metraje") & 
-		(habitaciones == mod.habitaciones || habitaciones == "habitaciones") &
-		(ruedas == mod.ruedas.toLowerCase() || ruedas == "ruedas")){
-		
-		//agrego propiedad al fragment  
-		//fragment += templateVentaCasa(mod)
-		fragment += templateModelo(mod)
-		}
+	const htmlfiltromodelos = document.getElementById("resultados")
+	lista = filtrarModelos(metraje, habitaciones, ruedas)
+	console.log(lista)
+	lista.forEach((mod) => {
+	  fragment += templateModelo(mod)
 	})
-  
-  
 	if(fragment == ""){
 		fragment += templateNotFound()
 	  }
-  
-	//agrego fragment al HTML
 	htmlfiltromodelos.innerHTML = fragment
-  } 
-  
-  // ================== TEMPLATES =================== //
+}  
 
+function filtrarModelos(metraje, habitaciones, ruedas){
+	
+	return modelos
+	.filter(mod => metraje == mod.metraje || metraje == "metraje")
+	.filter(mod => habitaciones == mod.habitaciones || habitaciones == "habitaciones")
+	.filter(mod => ruedas == mod.ruedas.toLowerCase() || ruedas == "ruedas")
+	
+  }
 
-// genero fragmento HTML
+//  	TEMPLATES 	 //
+
+// Genero fragmento HTML
+
 function templateModelo (mod){
 	fragment = ``
 
@@ -94,11 +92,11 @@ function templateModelo (mod){
 					</div>
 				</div>`
 	return fragment
-
 }
   
-  // No hay Modelos que coincidan con el criterio de busqueda
-  function templateNotFound(){
+// No hay Modelos que coincidan con el criterio de busqueda
+
+function templateNotFound(){
 	let card =
 	`<div class="row justify-item-center">
 		<div class="col-12">
@@ -106,13 +104,109 @@ function templateModelo (mod){
 		</div>
 	  </div>`
 	return card
-  }
-  
-// ============================ EJECUCION ========================= //
+}
+
+
+// 		 EJECUCION 		 //
 
 
 //creo array de modelos
-const modelos = crearArray()
 
+const modelos = crearArray()
 listarModelos("metraje", "habitaciones", "ruedas")
 
+
+//   	COTIZACION PERSONALIZADA	  //
+
+
+// Definicion de variables //
+
+let valorMetroCuadrado=500
+let valorHabitacion=4000
+let valorRuedas=2000
+
+let rueda
+let conOsin
+
+// Funcion para calculo de precio //
+
+function valor(a, b, c, d, e, f){
+	let resultado= Math.round(a*b)+(c*d)+(e*f)
+	return resultado
+}  
+
+// Funciones para detectar si los valores ingresados son validos //
+
+function valido(max,min,valor,variable){
+	if(isNaN(valor) || valor>max || valor<min){
+		document.getElementById(variable).innerHTML = "Debe ingresar un valor entre " + min + " y " + max
+		return true
+	} else {
+		document.getElementById(variable).innerHTML =""
+		return false}	
+}
+
+function ruedasValido(ruedas){
+	if (ruedas!='si' & ruedas!='no'){
+		document.getElementById("valor3").innerHTML = "Debe ingresar si o no"
+		return true
+	} else {
+		document.getElementById("valor3").innerHTML =""
+		return false
+	}
+}
+
+// Esta funcion se llama cuando presiono "Cotizar" desde el HTML
+
+function calculo() {
+
+	let metrosCuadrados = document.getElementById("metraje1").value.toLowerCase()
+	let cantidadHabitaciones = document.getElementById("habitaciones1").value.toLowerCase()
+	let ruedas = document.getElementById("ruedas1").value.toLowerCase()
+  
+	validar(metrosCuadrados, cantidadHabitaciones, ruedas)
+}
+
+// Esta funcion se llama cuando presiono "Borrar" desde el HTML
+
+function borrar(){
+	document.getElementById("valor").innerHTML =""
+	document.getElementById("valor1").innerHTML =""
+	document.getElementById("valor2").innerHTML =""
+	document.getElementById("valor3").innerHTML =""
+}
+
+// funcion validar
+
+function validar(metrosCuadrados, cantidadHabitaciones, ruedas){
+	let text
+  
+	while (text !== "valor válido"){ 
+
+	//se repite hasta obtener un valor valido
+	  
+	  if ((valido(60,15,metrosCuadrados,"valor1")) || (valido(3,0,cantidadHabitaciones,"valor2")) || (ruedasValido(ruedas))) {        
+		// si el valor ingresado no es valido
+		text = "Ingrese un valor válido!!"
+		console.log((valido(60,15,metrosCuadrados,"valor1")))
+		console.log((valido(3,0,cantidadHabitaciones,"valor2")))
+		console.log((ruedasValido(ruedas)))
+		document.getElementById("valor").innerHTML =""
+		break
+	  } else {
+		// si el valor ingresado es valido
+		text = "valor válido"
+		if(ruedas=='si'){
+			rueda=1
+			conOsin='con'
+		} else {
+			rueda=0
+			conOsin='sin'
+		}
+		document.getElementById("valor1").innerHTML =""
+		document.getElementById("valor2").innerHTML =""
+		document.getElementById("valor3").innerHTML =""
+		document.getElementById("valor").innerHTML = "El precio de una Tiny House de "  + metrosCuadrados + " m<sup>2</sup>, " + cantidadHabitaciones + " habitaciones y " + conOsin + " ruedas, es de " + valor(metrosCuadrados, valorMetroCuadrado, cantidadHabitaciones, valorHabitacion, rueda, valorRuedas) + " USD"
+	  }
+	}   
+}

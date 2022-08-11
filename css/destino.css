@@ -353,10 +353,14 @@
       font-size: 1rem;
       color: #9b815f;
       width: 40%; }
+    .cotizacion__personalizado--mensaje {
+      font-size: 0.8rem;
+      color: #604B2F; }
   .cotizacion__notfound {
     font-family: "Special Elite", cursive;
-    font-size: 1,5rem;
-    color: #d6cfc7; }
+    font-size: 1.5rem;
+    color: #d6cfc7;
+    text-align: center; }
 
 /*          GALERIA         */
 .galeria {
