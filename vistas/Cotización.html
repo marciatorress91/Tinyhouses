@@ -10,6 +10,10 @@
     <title>Tiny Houses Uruguay|Presupuesto</title>
     <link rel="shortcut icon" href="../assets/LOGO SIN FONDO.png">
     <link rel="stylesheet" href="../css/destino.css">
+
+
+    <script defer src="../js/app.js"></script>
+    <script defer src="../js/modal.js"></script>
 </head>
 <body>
     <!--ENCABEZADO-->
@@ -59,7 +63,27 @@
         <section class="container-fluid pb-4">
             <h2 class="cotizacion__h2">COTIZACIÓN</h2> 
             <hr class="cotizacion__hr">
-            <p class="cotizacion__p mb-0">Cotizá uno de nuestros modelos predefinidos:</p>
+            <p class="cotizacion__p mb-0">Cotizá uno de nuestros modelos predefinidos</p>
+            <div class="pb-5 text-center">
+            <button id="boton-carrito" class="cotizacion__carrito"><i class="bi bi-cart-fill"></i><span id="contadorCarrito">0</span></button>
+            </div>
+            <div class="modal-contenedor">
+              <div class="modal-carrito">
+                  <h3>Carrito</h3>
+                  <button id="carritoCerrar"><i class="bi bi-x-circle"></i></button>
+                  <div id="carrito-contenedor">
+                      <!-- <div class="productoEnCarrito">
+                          <p>Buzo 1</p>
+                          <p>Precio: $1200</p>
+                          <button class="boton-eliminar"><i class="bi bi-trash3"></i></button>
+                      </div> -->
+                  </div>
+                  <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                  <div class="text-center">
+                  <button id="vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
+                  </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-3 mx-auto pt-1 pb-5 d-flex justify-content-center">
                 <select id="metraje" class="form-select cotizacion__form text-center">
@@ -86,7 +110,7 @@
                 </select>
               </div>
               <div class="col-lg-3 mx-auto pt-1 pb-5 text-center">
-                <button class="cotizacion__botones" type="button" onclick="llamarModelos()">Filtrar</button>
+                <button class="cotizacion__botones" type="button" id="filtrar">Filtrar</button>
               </div>
             </div>
             <div class="row justify-content-evenly" id="resultados">
@@ -94,7 +118,7 @@
           </section>
           <!--SECCION: COTIZACIÓN PERSONALIZADA-->
         <hr class="cotizacion__hr">
-        <p class="cotizacion__p mb-0">Personalizá tu cotización:</p>
+        <p class="cotizacion__p mb-0">Personalizá tu cotización</p>
         <section class="pb-5">
           <form class="cotizacion__personalizado container-fluid p-4">
             <div class="row">
@@ -129,10 +153,10 @@
             </div>
             <div class="row text-center">
               <div class="col-sm-6 p-2">
-              <button class="cotizacion__personalizado--botones" type="button" onclick="calculo()">Cotizar</button>
+              <button class="cotizacion__personalizado--botones" type="button" id="cotizar" >Cotizar</button>
             </div>
             <div class="col-sm-6 p-2">
-              <button class="cotizacion__personalizado--botones" type="reset" onclick="borrar()">Borrar</button>
+              <button class="cotizacion__personalizado--botones" type="reset" id="borrar">Borrar</button>
             </div>
             <h5 class="p-4" style="text-transform: none;" id="valor"></h5>
           </form>
@@ -174,7 +198,6 @@
         <a class="fw-bold copyright__a" href="../Index.html">TinyHousesUY</a>
       </div>
     </footer>
-<script src="../js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

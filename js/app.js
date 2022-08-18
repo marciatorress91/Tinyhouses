@@ -4,7 +4,7 @@
 // Funcion constructora de objetos //
 
 class Modelo {
-	constructor(id,foto,nombre,metraje,habitaciones,ruedas,precio,detalles){
+	constructor(id,foto,nombre,metraje,habitaciones,ruedas,precio,detalles,cantidad){
 	this.id=id 
 	this.foto=foto
 	this.nombre=nombre;
@@ -13,6 +13,7 @@ class Modelo {
 	this.ruedas=ruedas
 	this.precio=precio
 	this.detalles=detalles
+    this.cantidad=cantidad
 	}
 }
 
@@ -22,17 +23,21 @@ class Modelo {
 
 function crearArray(){
 	const array=[]
-	array.push(new Modelo(1,"../assets/Galeria 3.png", 'Modelo Brandy', 60, 3, 'sin ruedas', 42000,"Catalogo.html#Modelobrandy"))
-	array.push(new Modelo(2,"../assets/Galeria 4.png",'Modelo July', 40, 2, 'sin ruedas', 28000,"Catalogo.html#Modelojuly"))
-	array.push(new Modelo(3,"../assets/Galeria 8.jpg",'Modelo Mia', 25, 1, 'con ruedas', 18500,"Catalogo.html#Modelomia"))
-	array.push(new Modelo(4,"../assets/Modelo Lilo.png",'Modelo Lilo', 60, 2, 'sin ruedas', 38000,"Catalogo.html#Modelolilo"))
-	array.push(new Modelo(5,"../assets/Modelo Dora.png",'Modelo Dora', 30, 1, 'con ruedas', 21000,"Catalogo.html#Modelodora"))
-	array.push(new Modelo(6,"../assets/Modelo Ron.png",'Modelo Ron', 40, 2, 'con ruedas', 30000,"Catalogo.html#Modeloron"))
+	array.push(new Modelo(1,"../assets/Galeria 3.png", 'Modelo Brandy', 60, 3, 'sin ruedas', 42000,"Catalogo.html#Modelobrandy",1))
+	array.push(new Modelo(2,"../assets/Galeria 4.png",'Modelo July', 40, 2, 'sin ruedas', 28000,"Catalogo.html#Modelojuly",1))
+	array.push(new Modelo(3,"../assets/Galeria 8.jpg",'Modelo Mia', 25, 1, 'con ruedas', 18500,"Catalogo.html#Modelomia",1))
+	array.push(new Modelo(4,"../assets/Modelo Lilo.png",'Modelo Lilo', 60, 2, 'sin ruedas', 38000,"Catalogo.html#Modelolilo",1))
+	array.push(new Modelo(5,"../assets/Modelo Dora.png",'Modelo Dora', 30, 1, 'con ruedas', 21000,"Catalogo.html#Modelodora",1))
+	array.push(new Modelo(6,"../assets/Modelo Ron.png",'Modelo Ron', 40, 2, 'con ruedas', 30000,"Catalogo.html#Modeloron",1))
 
 	return array
 }
 
 // Esta funcion se llama cuando presiono "Filtrar" desde el HTML
+
+const botonFiltrar=document.getElementById("filtrar")
+botonFiltrar.addEventListener("click", llamarModelos)
+
 
 function llamarModelos() {
  
@@ -47,7 +52,6 @@ function llamarModelos() {
 // Genero listado en HTML
 
 function listarModelos(metraje, habitaciones, ruedas){
-  
 	let fragment = ""
 	const htmlfiltromodelos = document.getElementById("resultados")
 	lista = filtrarModelos(metraje, habitaciones, ruedas)
@@ -62,13 +66,11 @@ function listarModelos(metraje, habitaciones, ruedas){
 }  
 
 function filtrarModelos(metraje, habitaciones, ruedas){
-	
 	return modelos
 	.filter(mod => metraje == mod.metraje || metraje == "metraje")
 	.filter(mod => habitaciones == mod.habitaciones || habitaciones == "habitaciones")
 	.filter(mod => ruedas == mod.ruedas.toLowerCase() || ruedas == "ruedas")
-	
-  }
+}
 
 //  	TEMPLATES 	 //
 
@@ -87,7 +89,10 @@ function templateModelo (mod){
 						<p class="card-text">${mod.ruedas}</p>
 						<hr class="cotizacion__card--hr"></hr>
 						<p class="card-text">Precio: ${mod.precio} USD</p>
-						<a href="${mod.detalles}" class="cotizacion__card--boton">Ver Detalles</a>
+						<button href="${mod.detalles}" class="cotizacion__card--boton">Ver Detalles</button>
+						<div class="pt-2">
+						<button id="agregar${mod.id}" class="cotizacion__card--boton" onclick="agregarAlCarrito(${mod.id})">Agregar <i class="bi bi-cart-fill"></i></button>
+						</div>
 					</div>
 					</div>
 				</div>`
@@ -158,6 +163,9 @@ function ruedasValido(ruedas){
 
 // Esta funcion se llama cuando presiono "Cotizar" desde el HTML
 
+const botonCotizar=document.getElementById("cotizar")
+botonCotizar.addEventListener("click", calculo)
+
 function calculo() {
 
 	let metrosCuadrados = document.getElementById("metraje1").value.toLowerCase()
@@ -168,6 +176,10 @@ function calculo() {
 }
 
 // Esta funcion se llama cuando presiono "Borrar" desde el HTML
+
+const botonBorrar=document.getElementById("borrar")
+botonBorrar.addEventListener("click", borrar)
+
 
 function borrar(){
 	document.getElementById("valor").innerHTML =""
@@ -210,3 +222,80 @@ function validar(metrosCuadrados, cantidadHabitaciones, ruedas){
 	  }
 	}   
 }
+
+//  Carrito de compra  //
+
+let carrito=[]
+
+const contenedorCarrito = document.getElementById('carrito-contenedor')
+const botonVaciar = document.getElementById('vaciar-carrito')
+const contadorCarrito = document.getElementById('contadorCarrito')
+const cantidad = document.getElementById('cantidad')
+const precioTotal = document.getElementById('precioTotal')
+const cantidadTotal = document.getElementById('cantidadTotal')
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
+
+//  AGREGAR AL CARRITO  //
+
+const agregarAlCarrito = (prodId) => {
+
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carrito
+
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { //creamos un nuevo arreglo e iteramos sobre cada curso y cuando
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, AGREGAMOS EL CURSO AL CARRITO
+        const item = modelos.find((prod) => prod.id === prodId)//Trabajamos con las ID
+        //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito() 
+}
+
+const actualizarCarrito = () => {
+    contenedorCarrito.innerHTML = "" 
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio:$${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="bi bi-trash3"></i></button>
+        `
+        contenedorCarrito.appendChild(div)
+    })
+	localStorage.setItem('carrito', JSON.stringify(carrito))
+    contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
+    console.log(carrito)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+    //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
+    //empezando en 0.
+}
+
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item)
+
+    carrito.splice(indice, 1) 
+    actualizarCarrito()
+    console.log(carrito)
+}
+
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito()
+})
