@@ -314,6 +314,17 @@
     border: none;
     font-family: "Special Elite", cursive;
     color: #9b815f; }
+    .cotizacion__card--a {
+      color: #d6cfc7;
+      background-color: #9b815f;
+      text-decoration: none;
+      border-radius: 1rem;
+      border-style: none;
+      opacity: 0.8;
+      padding: 1rem; }
+      .cotizacion__card--a:hover {
+        opacity: 1;
+        color: #d6cfc7; }
     .cotizacion__card--boton {
       color: #d6cfc7;
       background-color: #9b815f;
@@ -321,8 +332,8 @@
       border-radius: 1rem;
       border-style: none;
       opacity: 0.8;
-      padding: 1rem;
-      width: 60%; }
+      padding: 0.8rem;
+      width: 56%; }
       .cotizacion__card--boton:hover {
         opacity: 1;
         color: #d6cfc7; }

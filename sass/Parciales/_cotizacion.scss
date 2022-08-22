@@ -59,7 +59,7 @@
         border:none;
         font-family: $fuente;
         color: map-get($colores,"marron");
-        &--boton{
+        &--a{
             color: map-get($colores,"beige");
             background-color: map-get($colores,"marron");
             text-decoration: none;
@@ -67,7 +67,21 @@
             border-style: none;
             opacity: 0.8;
             padding: 1rem;
-            width: 60%;
+            &:hover {
+                opacity: 1;
+                color: map-get($colores,"beige");
+            }
+        }
+        &--boton{
+            color: map-get($colores,"beige");
+            background-color: map-get($colores,"marron");
+            text-decoration: none;
+            border-radius: 1rem;
+            border-style: none;
+            opacity: 0.8;
+            padding: 0.8rem;
+            width: 56%;
+            
             &:hover {
                 opacity: 1;
                 color: map-get($colores,"beige");

@@ -89,7 +89,9 @@ function templateModelo (mod){
 						<p class="card-text">${mod.ruedas}</p>
 						<hr class="cotizacion__card--hr"></hr>
 						<p class="card-text">Precio: ${mod.precio} USD</p>
-						<button href="${mod.detalles}" class="cotizacion__card--boton">Ver Detalles</button>
+						<div class="pb-3">
+						<a href="${mod.detalles}" class="cotizacion__card--a">Ver Detalles</a>
+						</div>
 						<div class="pt-2">
 						<button id="agregar${mod.id}" class="cotizacion__card--boton" onclick="agregarAlCarrito(${mod.id})">Agregar <i class="bi bi-cart-fill"></i></button>
 						</div>
@@ -149,7 +151,7 @@ function valido(max,min,valor,variable){
 	} else {
 		document.getElementById(variable).innerHTML =""
 		return false}	
-}
+} 
 
 function ruedasValido(ruedas){
 	if (ruedas!='si' & ruedas!='no'){
@@ -243,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //  AGREGAR AL CARRITO  //
 
+
 const agregarAlCarrito = (prodId) => {
 
     //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
@@ -251,10 +254,8 @@ const agregarAlCarrito = (prodId) => {
     if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
         const prod = carrito.map (prod => { //creamos un nuevo arreglo e iteramos sobre cada curso y cuando
             // map encuentre cual es el q igual al que está agregado, le suma la cantidad
-            if (prod.id === prodId){
-                prod.cantidad++
-            }
-        })
+            (prod.id === prodId)? (prod.cantidad++) : (prod.cantidad)
+            })
     } else { //EN CASO DE QUE NO ESTÉ, AGREGAMOS EL CURSO AL CARRITO
         const item = modelos.find((prod) => prod.id === prodId)//Trabajamos con las ID
         //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
