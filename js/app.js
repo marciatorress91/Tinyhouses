@@ -110,6 +110,12 @@ function templateNotFound(){
 		  <h3 class="mt-5 mb-5 text-center cotizacion__notfound">No se encontraron resultados <i class="bi bi-emoji-frown"></i></h3>
 		</div>
 	  </div>`
+    Swal.fire({
+        title: 'Oops',
+        text: 'No se encontraron resultados',
+        icon: 'error',
+        confirmButtonText: 'Intenta de nuevo',
+    })
 	return card
 }
 
