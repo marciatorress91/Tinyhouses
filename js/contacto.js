@@ -3,7 +3,6 @@
 // Envio email a trves de emailjs
 
 function envio(nombre, email, mensaje, asunto){
-  
     emailjs.send('service_xcuxcu8', 'template_4sxxztc', {
       from_name: nombre,
       from_email: email,
@@ -29,7 +28,6 @@ function envio(nombre, email, mensaje, asunto){
       console.log('Ocurrió un problema al enviar el correo');
       console.log("FAILED. error=", error);
     });
-  
     return
   }
 
@@ -58,11 +56,11 @@ function envio(nombre, email, mensaje, asunto){
       envio(Username.value, Usermail.value, texto, 'CONTACTO sitio web')
   
     } else {
-  
-      // aqui va que pasa cuando faltan datos
-      
+      Swal.fire({
+        text: 'Faltan ingresar datos',
+        icon: 'error',
+        confirmButtonText: 'Aceptar',
+      })
     }
-  
-  
   })
   

@@ -38,7 +38,6 @@ function crearArray(){
 const botonFiltrar=document.getElementById("filtrar")
 botonFiltrar.addEventListener("click", llamarModelos)
 
-
 function llamarModelos() {
  
 	//tomo las claves de busqueda del HTML
@@ -134,9 +133,9 @@ listarModelos("metraje", "habitaciones", "ruedas")
 
 // Definicion de variables //
 
-let valorMetroCuadrado=500
-let valorHabitacion=4000
-let valorRuedas=2000
+const valorMetroCuadrado=500
+const valorHabitacion=4000
+const valorRuedas=2000
 
 let rueda
 let conOsin
